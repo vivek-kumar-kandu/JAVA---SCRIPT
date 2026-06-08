@@ -34,7 +34,7 @@ const user = [  // array of objects meanss aray ke andar bahut sare object hai
         email: "vivek@gmail.com"
     },
     {
-        id : 1,
+        id: 1,
         name: "vivek ",
         email: "vivek@gmail.com"
     },
@@ -47,14 +47,56 @@ const user = [  // array of objects meanss aray ke andar bahut sare object hai
 
 //console.log(user[1].email); // array ke andar ke object ke email ko access karne ke liye hum is tarah se kar sakte hai  user[1].email  isse hume
 
-console.log(tinderUser);
-console.log((Object.keys(tinderUser)));
+// console.log(tinderUser);
+// console.log((Object.keys(tinderUser)));
 const keys = Object.keys(tinderUser)  // Object.keys() method returns an array of a given object's own enumerable property names, iterated in the same order that a normal loop would.
-console.log(keys);
-console.log(typeof keys);
-console.log((Object.values(tinderUser)));  // Object.values() method returns an array of a given object's own enumerable property values, in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
+// console.log(keys);
+// console.log(typeof keys);
+// console.log((Object.values(tinderUser)));  // Object.values() method returns an array of a given object's own enumerable property values, in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
 
-console.log((Object.entries(tinderUser)));  // Object.entries() method returns an array of a given object's own enumerable string-keyed property [key, value] pairs, in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
+// console.log((Object.entries(tinderUser)));  // Object.entries() method returns an array of a given object's own enumerable string-keyed property [key, value] pairs, in the same order as that provided by a for...in loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
 
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn')); // hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
+// console.log(tinderUser.hasOwnProperty('isLoggedIn')); // hasOwnProperty() method returns a boolean indicating whether the object has the specified property as its own property (as opposed to inheriting it).
+
+
+
+const course = {
+    courseName: "Java Script",
+    price: "9999",
+    courseInstructor: "vivek kumar"
+}
+
+console.log(course.courseInstructor)
+
+// yaha hum courseInstructor ko de structure karke iska name instructor rakhna chahte hai to hum is tarah se kar sakte hai  courseInstructor : instructor  isme humne courseInstructor ko instructor naam se access kiya hai  isse hum apne variable ka naam change kar sakte hai jab hum object destructuring karte hai
+const { courseName, price, courseInstructor: instructor } = course // object destructuring  isse hum course ke andar ke properties ko directly access kar sakte hai bina course. likhe
+console.log(courseName);
+console.log(instructor);  // isme humne courseInstructor ko instructor naam se access kiya hai  isse hum apne variable ka naam change kar sakte hai jab hum object destructuring karte hai
+
+
+// react mai de structing 
+const navBar = ({ company }) => {    // isme humne company ko directly access kiya hai bina props. likhe kyuki humne function ke parameter me hi de structuring kar diya hai  isse hum apne variable ka naam change kar sakte hai jab hum object destructuring karte hai
+
+}
+
+// navBar(company = "amazon")
+
+
+//   JSON 
+
+// {
+//     "name": "vivek ",
+//     "coursename": "react.js",
+//     "price": "free"
+// }
+
+// array ka de structuring
+
+
+[
+    {},
+    {},
+    {},
+
+]
